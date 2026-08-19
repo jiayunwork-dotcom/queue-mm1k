@@ -1,0 +1,14 @@
+{
+  "description": "rho=0.8, K large enough that L converges to M/M/1 value rho/(1-rho)=4.0",
+  "lambda": 0.8,
+  "mu": 1.0,
+  "k": 50,
+  "seed": 42,
+  "arrivals": 100000,
+  "expected": {
+    "rho": 0.8,
+    "mm1_mean_length": 4.0,
+    "p_block_near_zero": true,
+    "note": "With K=50 and rho=0.8, P_K is negligible and L should approximate rho/(1-rho)=4.0"
+  }
+}
