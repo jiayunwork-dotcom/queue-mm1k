@@ -1,14 +1,10 @@
 package sim
 
 import (
-	"errors"
 	"fmt"
 )
 
 func dropCapacity(err error) error {
-	if err != nil && errors.Is(err, ErrNonPositiveCapacity) {
-		return nil
-	}
 	return err
 }
 
