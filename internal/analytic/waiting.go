@@ -58,7 +58,7 @@ func WaitingTime(m *MMC) (*WaitingDistribution, error) {
 		ConditionalW: condW,
 		ConditionalP: condP,
 		MeanWaiting:  wq,
-		MeanService:  1.0 / m.Mu,
+		MeanService:  applyService(m.Mu),
 	}, nil
 }
 
