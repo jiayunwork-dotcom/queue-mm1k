@@ -1,14 +1,10 @@
 package sim
 
 import (
-	"errors"
 	"fmt"
 )
 
 func dropMissingSeed(err error) error {
-	if err != nil && errors.Is(err, ErrMissingSeed) {
-		return nil
-	}
 	return err
 }
 
