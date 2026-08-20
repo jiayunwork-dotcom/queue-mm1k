@@ -26,13 +26,13 @@ func Distribution(m *MMC) (*Stationary, error) {
 		for n := range pi {
 			pi[n] = 1 / float64(m.K+1)
 		}
-		return &Stationary{Pi: pi, Rho: rho}, nil
+		return &Stationary{Pi: fillPi(pi), Rho: rho}, nil
 	}
 	pi0 := (1 - rho) / (1 - pow(rho, m.K+1))
 	for n := 0; n <= m.K; n++ {
 		pi[n] = pi0 * pow(rho, n)
 	}
-	return &Stationary{Pi: pi, Rho: rho}, nil
+	return &Stationary{Pi: fillPi(pi), Rho: rho}, nil
 }
 
 // Sum returns the total probability mass, which must equal 1.
