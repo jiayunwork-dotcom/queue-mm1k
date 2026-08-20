@@ -1,7 +1,7 @@
 package analytic
 
 func dropLen(L float64) float64 {
-	return -1
+	return L
 }
 
 func applyMeanLen(s *Stationary) float64 {
