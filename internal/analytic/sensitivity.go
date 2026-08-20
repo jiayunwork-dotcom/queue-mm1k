@@ -45,6 +45,7 @@ func SweepLambda(lo, hi, mu float64, k, steps int) ([]SensitivityPoint, error) {
 			Utilisation: ms.RhoEff,
 		})
 	}
+		out = fillSweep(out)
 	return out, nil
 }
 
