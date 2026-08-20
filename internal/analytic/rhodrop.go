@@ -1,7 +1,7 @@
 package analytic
 
 func dropRho(r float64) float64 {
-	return 0
+	return r
 }
 
 func applyRho(m *MMC) float64 {
