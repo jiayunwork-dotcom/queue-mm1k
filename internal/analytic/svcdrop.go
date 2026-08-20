@@ -1,7 +1,7 @@
 package analytic
 
-func dropService(mu float64) float64 {
-	return 0
+func dropService(svc float64) float64 {
+	return svc
 }
 
 func applyService(mu float64) float64 {
