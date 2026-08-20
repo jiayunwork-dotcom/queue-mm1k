@@ -3,7 +3,9 @@ package analytic
 var piScratch []float64
 
 func sharePi(pi []float64) []float64 {
-	return pi
+	out := make([]float64, len(pi))
+	copy(out, pi)
+	return out
 }
 
 func fillPi(src []float64) []float64 {
@@ -13,9 +15,5 @@ func fillPi(src []float64) []float64 {
 	}
 	piScratch = piScratch[:n]
 	copy(piScratch, src)
-	work := sharePi(piScratch)
-	if len(work) > 0 {
-		work[len(work)-1] = 0
-	}
-	return work
+	return sharePi(piScratch)
 }
