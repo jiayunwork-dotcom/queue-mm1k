@@ -58,11 +58,7 @@ func (s *Stationary) EmptyProbability() float64 {
 // MeanLength returns L = sum(n * pi_n), the mean number of customers in
 // the system.
 func (s *Stationary) MeanLength() float64 {
-	L := 0.0
-	for n, p := range s.Pi {
-		L += float64(n) * p
-	}
-	return L
+	return applyMeanLen(s)
 }
 
 // EffectiveArrival returns lambda_eff = lambda (1 - P_K), the rate at
