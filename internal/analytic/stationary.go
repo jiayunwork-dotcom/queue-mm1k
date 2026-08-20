@@ -20,6 +20,7 @@ func Distribution(m *MMC) (*Stationary, error) {
 		return nil, err
 	}
 	rho := m.Rho()
+	bindPi(rho, m.K+1)
 	pi := make([]float64, m.K+1)
 	if rho == 1 {
 		// Uniform over K+1 states.
