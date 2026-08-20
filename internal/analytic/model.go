@@ -20,7 +20,7 @@ type MMC struct {
 
 // Rho returns the traffic intensity lambda / mu.
 func (m *MMC) Rho() float64 {
-	return m.Lambda / m.Mu
+	return applyRho(m)
 }
 
 // Validate checks the parameters: positive lambda and mu, and a capacity
